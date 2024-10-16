@@ -17,7 +17,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Arial", sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-style: 16px;
     line-height: 1.5;
     background-color: #fff;
@@ -29,16 +29,22 @@ img {
     height: auto;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+*:focus {
+    outline: 2px dashed #1e90ff;
+    outline-offset: 2px;
 }
+
 
 
 /* CONTAINER */
@@ -69,6 +75,7 @@ ul {
 
 /* SECTION HERO */
 .hero {
+    padding: 24px;
     width: 100%;
     max-width: 600px;
     display: flex;
@@ -87,6 +94,8 @@ ul {
     margin-top: 0;
     margin-bottom: 24px;
     font-size: 24px;
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 2px;
     color: #fff;
@@ -95,8 +104,16 @@ ul {
     display: inline-block;
     background-color: #1e90ff;
     color: #fff;
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+.hero-link:hover {
+    background-color: rgba(30, 144, 255, 0.8);
+}
+.hero-link:active {
+    background-color: rgba(30, 144, 255, 0.6);
 }
 .hero-link-inner {
     display: flex;
@@ -113,9 +130,131 @@ ul {
     background-position: center center;
     content: "";
 }
-.hero-link-text {
-}
 /* //SECTION HERO */
+
+
+/* LATEST VIDEOS */
+.latest-videos {
+    background-color: #fff;
+    padding: 54px;
+    width: 100%;
+    max-width: 600px;
+}
+.latest-videos-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.latest-videos-line {
+    border: 0;
+    height: 1px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: #999;
+}
+.latest-videos-list{
+    margin-bottom: 24px;
+}
+.latest-videos-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* item latest videos */
+.item-latest-videos {
+    display: flex;
+}
+.item-latest-videos-img {
+    width: 160px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.item-latest-videos-info {
+    padding: 16px;
+}
+.item-latest-videos-title {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-family: "Bebas Neue", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+.item-latest-videos-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    text-transform: uppercase;
+}
+.item-latest-videos-link:hover{
+    color: #1e90ff;
+}
+.item-latest-videos-link:active{
+    opacity: 0.6;
+}
+.item-latest-videos-meta {
+    display: flex;
+    align-items: center;
+    color: #888;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.item-latest-videos-meta-item{
+    display: flex;
+    align-items: center;
+}
+.item-latest-videos-meta-item:not(:last-child) {
+    margin-right: 24px;
+}
+.item-latest-videos-meta-item::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    content: "";
+}
+
+.item-latest-videos-meta-item-published-date::before{
+    background-image: url(../img/time.svg);
+}
+.item-latest-videos-meta-item-views::before{
+    background-image: url(../img/eye.svg);
+}
+
+/* load more button */
+.load-more-button{
+    display: block;
+    border: 0;
+    padding: 12px;
+    width: 100%;
+    background-color: #1e90ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: normal;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.load-more-button:hover{
+    background-color: rgba(30, 144, 255, 0.8);
+}
+.load-more-button:active{
+    background-color: rgba(30, 144, 255, 0.6);
+}
+
+/* //LATEST VIDEOS */
+
+
+
 
 /* RETINA BG IMG */
 @media
